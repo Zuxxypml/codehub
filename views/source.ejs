@@ -1,0 +1,105 @@
+<%- include('partials/header') %> 
+  <body>
+   <div class="home">
+        <header class="navbar flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">CodeHub</a>
+      <button
+        class="navbar-toggler ms-auto d-md-none collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#sidebarMenu"
+        aria-controls="sidebarMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"><i class="bi bi-list py-auto"></i></span>
+      </button>
+
+      <ul class="navbar nav">
+        <li class="nav-item text-nowrap hide">
+        <p>Hello, <%=username%></p>
+        </li>
+         <li class="nav-item text-nowrap">
+          <a class="nav-link px-3 btn btn-logout hide space d-flex align-items-center" href="/logout">Sign out <span data-feather="log-out"></span></a>
+         </li>
+        </ul>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav
+          id="sidebarMenu"
+          class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
+        >
+          <div class="position-sticky pt-3">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/codehub">
+                  <i data-feather="home"></i>
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/projects">
+                  <span data-feather="file"></span>
+                  Projects
+                </a>
+              </li>
+            
+              <li class="nav-item">
+                <a class="nav-link active" href="/source">
+                  <span data-feather="code"></span>
+                  Source Codes
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/integration">
+                  <span data-feather="layers"></span>
+                  Integrations
+                </a>
+              </li>
+                 <li class="nav-item">
+                <a class="nav-link" href="/setting">
+                  <span data-feather="settings"></span>
+                  Settings
+                </a>
+              </li>
+                <li class="nav-item sign-out inverse-hide">
+                <a class="nav-link" href="/logout">
+                  <span data-feather="log-out"></span>
+                  Sign out
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+          >
+            <h1 class="h2 hide">Upload your project folder</h1>
+          </div>
+
+       <div class="p-5 mb-4 bg-light rounded-3">
+             <div class="container-fluid py-5">
+              <h1 class="display-5 fw-bold">Upload your Files</h1>
+               <p class="col-md-8 pb-3">Save your project files, key and secret files with <span style="color:  #FF735C;">CodeHub</span></p>
+              <!-- <input type="file" name="files" id=""> -->
+              <button class="btn btn-colored" type="button">Upload Files</button>
+         </div>
+       </div>
+        <!-- <form action="/stats" enctype="multipart/form-data" method="post">
+  <div class="form-group">
+    <input type="file" class="form-control-file" name="uploaded_file">
+    <input type="text" class="form-control" placeholder="Number of speakers" name="nspeakers">
+    <input type="submit" value="Get me the stats!" class="btn btn-default">            
+  </div>
+</form> -->
+          </div>
+        </main>
+      </div>
+    </div>
+   </div>
+
+<%- include('partials/footer') %> 
